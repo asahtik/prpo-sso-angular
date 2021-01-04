@@ -1,0 +1,10 @@
+<ul *ngIf="termini">
+    <li *ngFor="let t of termini">
+        Termin {{t.id}}, max: {{t.maxSt}} 
+        <ol *ngIf="prijave">
+            <li *ngFor="let p of filterPrijave(t.id)">Prijava: {{p.id}}, {{p.timestamp | tstodate}} | <a *ngIf="!p.potrjena" (click)="confirm(p)">Potrdi</a></li>
+        </ol>
+    </li>
+</ul>
+<hr>
+<p *ngIf="msg">{{msg}}</p>

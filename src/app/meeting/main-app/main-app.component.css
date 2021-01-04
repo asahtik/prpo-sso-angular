@@ -1,0 +1,13 @@
+h2 {
+    background-color:gray;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    color: #aaaaaa;
+}

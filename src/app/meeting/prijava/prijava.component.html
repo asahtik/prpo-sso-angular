@@ -1,0 +1,4 @@
+<ul *ngIf="studenti">
+    <li *ngFor="let s of studenti" (click)="send(s)" style="cursor: pointer;">Student {{s.stizkaznice}}</li>
+</ul>
+<p *ngIf="msg">{{msg}}</p>

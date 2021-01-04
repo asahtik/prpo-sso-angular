@@ -1,0 +1,12 @@
+<ul *ngIf="ts">
+    <li *ngFor="let t of ts" (click)="getDetails(t)" style="cursor: pointer;">Termin {{t.id}}</li>
+</ul>
+<br><hr><br>
+<ul *ngIf="term">
+    <li>ID: {{term.id}}</li>
+    <li>Date and Time: {{term.timestamp | tstodate}}</li>
+    <li>Professor: {{term.profesor.email}}</li>
+    <li>Location ID: {{term.location}}</li>
+    <li><a routerLink="{{'/prijava/'+term.id+'/post'}}" style="cursor: pointer; color: green;">Attend</a></li>
+    <li><a routerLink="{{'/prijava/'+term.id+'/delete'}}" style="cursor: pointer; color: red;">Unattend</a></li>
+</ul>

@@ -5,11 +5,11 @@ import {FormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 
-import {AppComponent} from './app.component';
-import {SeznamiComponent} from './seznami/seznami.component';
-import {ArtikelDodajComponent} from './seznami/artikel-dodaj.component';
-import {SeznamPodrobnostiComponent} from './seznami/seznam-podrobnosti.component';
-import {SeznamiService} from './seznami/services/seznami.service';
+import { MainAppComponent } from './meeting/main-app/main-app.component';
+import { TerminiComponent } from './meeting/termini/termini.component';
+import { TstodatePipe } from './tstodate.pipe';
+import { PrijavaComponent } from './meeting/prijava/prijava.component';
+import { PrijaveComponent } from './meeting/prijave/prijave.component';
 
 
 @NgModule({
@@ -20,13 +20,14 @@ import {SeznamiService} from './seznami/services/seznami.service';
         FormsModule
     ],
     declarations: [
-        AppComponent,
-        SeznamiComponent,
-        SeznamPodrobnostiComponent,
-        ArtikelDodajComponent
+        MainAppComponent,
+        TerminiComponent,
+        TstodatePipe,
+        PrijavaComponent,
+        PrijaveComponent
     ],
-    providers: [SeznamiService],
-    bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [MainAppComponent]
 })
 export class AppModule {
 }
